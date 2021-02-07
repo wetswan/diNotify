@@ -9,7 +9,7 @@ In order to run the application you need:
 * Windows 10 1903 or later
 * Logitech diNovo Keyboard / MediaPad
 
-## etting to run
+## Getting the app to run
 * You need to set the Package project as start-up as it wraps the WinForms application. This was done as receiving events from the UserNotificationListener does not seem to work without a UWP context
 * After the app has started, click "Start Listener" and send a test notification with "Send toast"
 * If the connection to the bluetooth MediaPad fails, check if the address in MediaPad.cs line 45 matches your device (there were multiple versions of the device)
