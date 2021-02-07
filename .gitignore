@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/diNotifyPackage/obj/Debug
+/diNotifyPackage/bin/AnyCPU/Debug
+/diNotifyPackage/diNotifyPackage.wapproj.user
+/diNotify/bin/Debug/netcoreapp3.1
+/diNotify/obj/Debug/netcoreapp3.1
+/diNotify/obj/Release/netcoreapp3.1
+/diNotify/obj
+/.vs
