@@ -14,6 +14,21 @@ namespace diNotify
             InitializeComponent();
             bool success = MediaPad.CreateInstance();
             LogNotification($"Connection to MediaPad: {success}");
+
+            while(!success)
+            {
+                var result = MessageBox.Show(this, "No connection to MediaPad. Please verify it is connected and try again.", "MediaPad not found", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+
+                if(result == DialogResult.OK)
+                {
+                    success = MediaPad.CreateInstance();
+                    LogNotification($"Connection to MediaPad: {success}");
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
         }
 
         private async void button1_ClickAsync(object sender, EventArgs e)
@@ -106,8 +121,8 @@ namespace diNotify
         {
             // Construct the content
             var content = new ToastContentBuilder()
-                .AddText($"Der Inhalt der ")
-                .AddText($"Benachrichtigung")
+                .AddText($"This is just")
+                .AddText($"a test message.")
                 .GetToastContent();
 
             // Create the notification
