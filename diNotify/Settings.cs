@@ -26,8 +26,13 @@ namespace diNotify
                 }
                 else
                 {
-                    Application.Exit();
+                    break;
                 }
+            }
+
+            if(!success)
+            {
+                Environment.Exit(1);
             }
         }
 
